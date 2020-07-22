@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ZCXReadViewController.h"
 
 FOUNDATION_EXPORT double TestCompBVersionNumber;
 FOUNDATION_EXPORT const unsigned char TestCompBVersionString[];
