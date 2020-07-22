@@ -1,0 +1,6 @@
+framework module TestCompB {
+  umbrella header "TestCompB-umbrella.h"
+
+  export *
+  module * { export * }
+}
