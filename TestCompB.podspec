@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'TestCompB/Classes/**/*'
+#  s.source_files = 'TestCompB/Classes/**/*'
   
   # s.resource_bundles = {
   #   'TestCompB' => ['TestCompB/Assets/*.png']
@@ -41,9 +41,47 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   
   
-  
-  
+  if ENV['IS_SOURCE'] || ENV['TestCompB']
 
+       s.public_header_files = 'TestCompB/Classes/**/*.h'
+       #s.source_files = 'MyTest/Classes/**/*.{h,m,mm,c}'
+
+        s.subspec 'Controller' do |ss|
+           ss.source_files = 'TestCompB/Classes/Controller/*.{h,m}'
+         end
+        s.subspec 'View' do |ss|
+           ss.source_files = 'TestCompB/Classes/View/*.{h,m}'
+        end
+
+        s.subspec 'Model' do |ss|
+           ss.source_files = 'TestCompB/Classes/Model/*.{h,m}'
+        end
+        s.resource_bundles = {
+                 'TestCompB' => ['TestCompB/Assets/*.png','TestCompB/Classes/**/*.{xib,nib,plist,lsc}'],
+              }
+
+        # s.frameworks = 'UIKit', 'MapKit'
+         s.dependency 'AFNetworking', '~> 2.3'
+         s.dependency 'BeeHive'
+  else
+        # s.source_files = 'MyTest/Classes/**/*.{h}'
+
+        s.subspec 'Controller' do |ss|
+        ss.source_files = 'TestCompB/Classes/Controller/*.{h}'
+        end
+        s.subspec 'View' do |ss|
+        ss.source_files = 'TestCompB/Classes/View/*.{h}'
+        end
+        s.subspec 'Model' do |ss|
+        ss.source_files = 'TestCompB/Classes/Model/*.{h}'
+        end
+        s.resources = 'TestCompB/Products/TestCompB.bundle','TestCompB/Classes/**/*.bundle'
+        s.public_header_files = 'TestCompB/Classes/**/*.h'
+        s.vendored_frameworks = 'TestCompB/Products/TestCompB.framework'
+        # s.frameworks = 'UIKit', 'MapKit'
+        s.dependency 'AFNetworking', '~> 2.3'
+        s.dependency 'BeeHive'
+  end
   
   
 end

@@ -18,5 +18,33 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TestCompB/Classes/**/*"
+  "public_header_files": "TestCompB/Classes/**/*.h",
+  "resource_bundles": {
+    "TestCompB": [
+      "TestCompB/Assets/*.png",
+      "TestCompB/Classes/**/*.{xib,nib,plist,lsc}"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
+    "BeeHive": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Controller",
+      "source_files": "TestCompB/Classes/Controller/*.{h,m}"
+    },
+    {
+      "name": "View",
+      "source_files": "TestCompB/Classes/View/*.{h,m}"
+    },
+    {
+      "name": "Model",
+      "source_files": "TestCompB/Classes/Model/*.{h,m}"
+    }
+  ]
 }

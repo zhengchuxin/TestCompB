@@ -10,7 +10,14 @@
 #endif
 #endif
 
-#import "ZCXReadViewController.h"
+#import "ZCXCompBMyControllerViewController.h"
+#import "ZCXLookViewController.h"
+#import "ZCXCompBModel1.h"
+#import "ZCXCompBView1.h"
+#import "ZCXCompBMyControllerViewController.h"
+#import "ZCXLookViewController.h"
+#import "ZCXCompBModel1.h"
+#import "ZCXCompBView1.h"
 
 FOUNDATION_EXPORT double TestCompBVersionNumber;
 FOUNDATION_EXPORT const unsigned char TestCompBVersionString[];

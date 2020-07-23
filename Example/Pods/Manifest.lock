@@ -1,15 +1,58 @@
 PODS:
-  - TestCompB (0.1.0)
+  - AFNetworking (2.7.0):
+    - AFNetworking/NSURLConnection (= 2.7.0)
+    - AFNetworking/NSURLSession (= 2.7.0)
+    - AFNetworking/Reachability (= 2.7.0)
+    - AFNetworking/Security (= 2.7.0)
+    - AFNetworking/Serialization (= 2.7.0)
+    - AFNetworking/UIKit (= 2.7.0)
+  - AFNetworking/NSURLConnection (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.7.0)
+  - AFNetworking/Security (2.7.0)
+  - AFNetworking/Serialization (2.7.0)
+  - AFNetworking/UIKit (2.7.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BeeHive (1.6.0)
+  - TestCompB (0.1.0):
+    - AFNetworking (~> 2.3)
+    - BeeHive
+    - TestCompB/Controller (= 0.1.0)
+    - TestCompB/Model (= 0.1.0)
+    - TestCompB/View (= 0.1.0)
+  - TestCompB/Controller (0.1.0):
+    - AFNetworking (~> 2.3)
+    - BeeHive
+  - TestCompB/Model (0.1.0):
+    - AFNetworking (~> 2.3)
+    - BeeHive
+  - TestCompB/View (0.1.0):
+    - AFNetworking (~> 2.3)
+    - BeeHive
 
 DEPENDENCIES:
   - TestCompB (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - BeeHive
 
 EXTERNAL SOURCES:
   TestCompB:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TestCompB: faf52530091fc01b2e0e2f87842c53dd16979374
+  AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
+  BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
+  TestCompB: fd2506d23bc0b17ed40d34e0d11a29ddaf4496ac
 
 PODFILE CHECKSUM: d69a679ea1f017076c4bcab3a3da52ea911a6604
 
